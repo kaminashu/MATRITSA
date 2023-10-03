@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navgraph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/tanishuvFragment">
 
+    <fragment
+        android:id="@+id/tanishuvFragment"
+        android:name="www.uzmd.matritsa.presentation.TanishuvFragment"
+        android:label="fragment_tanishuv"
+        tools:layout="@layout/fragment_tanishuv" >
+        <action
+            android:id="@+id/action_tanishuvFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="www.uzmd.matritsa.presentation.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_bosqichFragment"
+            app:destination="@id/bosqichFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_batafsilFragment"
+            app:destination="@id/batafsilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/batafsilFragment"
+        android:name="www.uzmd.matritsa.presentation.BatafsilFragment"
+        android:label="fragment_batafsil"
+        tools:layout="@layout/fragment_batafsil" />
+    <fragment
+        android:id="@+id/bosqichFragment"
+        android:name="www.uzmd.matritsa.presentation.BosqichFragment"
+        android:label="fragment_bosqich"
+        tools:layout="@layout/fragment_bosqich" >
+        <action
+            android:id="@+id/action_bosqichFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="www.uzmd.matritsa.presentation.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
 </navigation>

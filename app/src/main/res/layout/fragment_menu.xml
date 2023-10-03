@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#CC000000"
     tools:context=".presentation.MenuFragment">
 
     <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:background="@drawable/shape_cicrle_menu"
         android:id="@+id/progresss_bar"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:background="@drawable/shape_cicrle_menu"
         app:cpb_background_progressbar_color="#b6bbd8"
         app:cpb_background_progressbar_width="5dp"
         app:cpb_progress_direction="to_right"
@@ -46,19 +46,19 @@
         tools:ignore="MissingConstraints,RtlHardcoded">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:textColor="@color/white"
             android:id="@+id/android_tasbeh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_raund_on"
             android:padding="5dp"
             android:text="ASOSIY"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/appCompatButton_tasbeh"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton_namoz_tasbehi"
+            android:id="@+id/batafsilBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_raund_off"
@@ -70,31 +70,32 @@
     </LinearLayout>
 
     <TextView
-        android:textStyle="italic"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="KUNLIK STATISTIKA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="KUNLIK STATISTIKA"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progresss_bar" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boshlashBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_intelect"
+        android:text="BOSHLASH"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="italic"
-        android:text="BOSHLASH"
-        android:background="@drawable/shape_intelect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
